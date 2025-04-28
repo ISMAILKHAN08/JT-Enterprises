@@ -1,0 +1,150 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    color: #333;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  header, footer {
+    background: linear-gradient(to right, #002147, #005c97);
+    color: white;
+    padding: 1.5em;
+    text-align: center;
+    animation: slideFade 1s ease-in-out;
+    position: relative;
+  }
+  .menu-toggle {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1em;
+    transition: max-height 0.3s ease-in-out;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  nav a:hover {
+    color: #00b4d8;
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .logo {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .highlight {
+    color: #00b4d8;
+  }
+  section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    animation: fadeInUp 1s ease-in-out;
+  }
+  h2 {
+    color: #002147;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .gallery img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+  .testimonial {
+    background-color: #e6f4ff;
+    border-left: 5px solid #00b4d8;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  footer {
+    font-size: 14px;
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideFade {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  .whatsapp-float:hover {
+    background-color: #128c7e;
+  }
+  .whatsapp-float img {
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+    nav {
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      max-height: 0;
+    }
+    nav.show {
+      max-height: 500px;
+    }
+  }
